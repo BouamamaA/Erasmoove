@@ -1,0 +1,20 @@
+<center><h1> Créer un administrateur </h1>
+<% if(flash && flash.err===1){ %>
+  <p> <%= flash.message %> </p>
+  <% } %>
+   
+<form role="form" methode="POST" action="/admin/create">
+  <div class="form-group">
+    <label for="name">Nom</label>
+    <input type="text" class="form-control" id="name" name="name">
+  </div>
+  <div class="form-group">
+    <label for="password">Mot de passe</label>
+    <input type="password" class="form-control" id="password" name="password">
+  </div>
+  <div class="form-group">
+    <label for="rePassword">Confirmation</label>
+    <input type="password" class="form-control" id="rePassword" name="rePassword">
+  </div>
+  <button type="submit" class="btn btn-primary">Envoyer</button>
+</form> </center>
