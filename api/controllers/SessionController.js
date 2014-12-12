@@ -32,18 +32,9 @@ module.exports = {
         	   }
         	else{
                 req.session.user = user;
-                res.redirect('admin/profil');
+                res.redirect('admin/profil'+user.id);
         	}
         	});
-	},
-
-	profil: function(req,res){
-		if(req.session.user){
-			res.view();
-		}
-		else{
-			res.redirect('session/new');
-		}
 	}
 	
 };

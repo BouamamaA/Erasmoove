@@ -36,12 +36,16 @@ module.exports = {
    },
 
    profil :function(req, res, next){
+     if(req.session.user){
      Admin.findOne(req.param('id'), function adminFound(err, admin){
       if(err) return next(err);
       if(!admin) return next();
       res.view({ admin: admin});
-     }) 
-
+     });
+     }
+    else{
+      res.redirect('session/new');
+    } 
    }
 };
 
