@@ -1,0 +1,14 @@
+Instruction pour la création des views: 
+
+Connexion Admin:
+Créer un dossier session dans views.
+
+Dans new: Créer un formulaire avec des inputs ayant pour noms: email et password, action du formulaire: session/login Afficher un message d'erreur au cas ou (objet flash, message contenu dans flash.message).
+
+Créer admin/profil qui permet de créer des université. Accès celui qui ouvre la page via admin.
+
+Créer un bouton logout de déconnexion.
+
+
+Profil Université: 
+Voir les variables dans univ.model, ajouter des photos, modifier photo profil (que pour les admins) j'ai créé des méthodes pour. 

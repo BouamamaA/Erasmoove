@@ -35,7 +35,7 @@ module.exports = {
 	    });
    },
 
-   profil :function(req, res, next){
+   profil: function(req, res, next){
      if(req.session.user){
      Admin.findOne(req.param('id'), function adminFound(err, admin){
       if(err) return next(err);
