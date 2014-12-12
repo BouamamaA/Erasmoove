@@ -1,0 +1,20 @@
+<div class='admin-title'>
+     <h1> <%= admin.name %> </h1>
+ </div>
+<table class='table'>
+	<tr>
+		<th>Prénom</th>
+		<th>Nom</th>
+		<th>Email</th>	
+	</tr>
+	<% _.each(universities, function(univ){ %>
+	<tr>
+		<td> <%- univ.name %> </td>
+		<td> <%- univ.city %> </td>
+		<td> <%- univ.country %> </td>
+		<td> <a href="/univ/view/<%=univ.id%>" class='btn btn-success'> View </a> </td> 
+		<td> <a href="/univ/edit/<%=univ.id%>" class='btn btn-warning'> Edit </a> </td> 
+		<td> <a href="/univ/delete/<%=univ.id%>" class='btn btn-danger'> Delete </a> </td> 
+	</tr>
+	<% }) %>
+</table>

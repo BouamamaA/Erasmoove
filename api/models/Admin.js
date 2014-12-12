@@ -7,29 +7,34 @@
 
 module.exports = {
 
-	types: {
-		password: function(password) {
-          return password === this.passwordConfirmation;
-        }
-	},
+  types: {
+    password:function(password){
+      return password === this.rePassword;
+    }
+  },
 
   attributes: {
 
   	name:{
-  		type: "string",
+  		type: 'string',
   		required: true
   	},
 
   	password:{
-  		type: "string",
+  		type: 'string',
   		required: true,
-  		password: true
+      password: true
   	},
 
   	rePassword:{
-  		type: "string",
+  		type: 'string',
   		required: true
-  	}
+  	},
+
+    superAdmin:{
+      type: 'boolean',
+      defaultTo: false
+    }
 
   }
 };
