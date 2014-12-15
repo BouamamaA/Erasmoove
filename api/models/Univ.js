@@ -41,10 +41,9 @@ module.exports = {
     
     scores:{
     	type: 'string' // Score TOEFL/entretien de langue
-    }.
+    }
 
-    
-
+  
   }
 };
 
