@@ -18,6 +18,7 @@
         }
     },
 
+<<<<<<< HEAD
     login: function(req,res,next){
         if(!req.session.authenticated){
             Admin.findOneByName(req.param('name'), function(err, admin){
