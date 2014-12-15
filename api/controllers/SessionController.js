@@ -8,7 +8,7 @@
  module.exports = {
 
        'new': function(req,res){
-        if(req.session.user){
+        if(!req.session.user){
                 res.locals.flash = _.clone(req.session.flash);
                 res.view();
                 req.session.flash = {};
@@ -28,7 +28,7 @@ login: function(req,res,next){
         		}
                         res.redirect('session/new');    	
                 }
-                else if(admin.password===req.param('password')){
+                else if(admin.password!=req.param('password')){
                       req.session.flash = {
                              err: 1,
                              message: "Mot de passe incorrect"
